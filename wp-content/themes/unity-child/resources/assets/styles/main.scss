@@ -1,4 +1,13 @@
 // Import parent theme styles
-@import "/../../../../unity-core/resources/assets/styles/main";
+@import '/../../../../unity-core/resources/assets/styles/main';
 
 // Import child theme overrides into this file
+@import 'common/variables';
+@import 'common/global';
+@import 'common/grid';
+@import 'common/typography';
+@import 'components/buttons';
+@import 'components/icons';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/navbar';

@@ -1,0 +1,39 @@
+// Font size utility classes.
+$sizes: (
+  'h1': rem-calc(60),
+  'h2': rem-calc(34),
+  'h3': rem-calc(24)
+);
+
+@each $heading, $size in $sizes {
+  #{$heading},
+  .#{$heading} {
+    font-size: $size;
+    font-family: $serif;
+    font-weight: normal;
+    letter-spacing: 0;
+    margin: 0;
+  }
+}
+
+// Font weight utility classes.
+$weights: (400, 600, 700);
+
+@each $weight in $weights {
+  .fw-#{$weight} {
+    font-weight: $weight;
+  }
+}
+
+// Misc typographic utility classes.
+.lead {
+  font-size: 1.25rem;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}

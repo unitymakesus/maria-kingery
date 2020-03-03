@@ -1,0 +1,24 @@
+// Colors
+$color-white: #FFF;
+$color-black: #212121;
+$color-mint-light: #E4EDE8;
+$color-mint: #B0CBC4;
+$color-mint-dark: #638179;
+$color-purple-light: #6C5E79;
+$color-purple: #45325D;
+$color-purple-dark: #3E3747;
+
+$brand-primary: $color-purple-dark;
+$brand-secondary: $color-mint;
+
+// Typography
+$serif: 'Vollkorn', serif;
+$sans-serif: 'Nunito', sans-serif;
+
+// Grid
+$medium-and-up: 'only screen and (min-width: #{$medium-screen-up})';
+$large-and-down: 'only screen and (max-width: #{$large-screen})';
+$large-and-up: 'only screen and (min-width: #{$large-screen-up})';
+
+// Misc
+$box-shadow-default: 0 0 15px transparentize($color-black, 0.6);

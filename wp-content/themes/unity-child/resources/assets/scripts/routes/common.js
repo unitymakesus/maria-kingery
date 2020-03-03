@@ -1,8 +1,9 @@
+import initMainMenu from '../util/initMainMenu';
+
 export default {
   init() {
-    // JavaScript to be fired on all pages
+    initMainMenu();
   },
   finalize() {
-    // JavaScript to be fired on all pages, after the init JS
   },
 };

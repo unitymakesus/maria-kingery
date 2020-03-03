@@ -1,0 +1,23 @@
+button:hover {
+  cursor: pointer;
+}
+
+// Menu toggles
+.btn-menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  color: $color-mint-dark;
+  border: 0;
+  background-color: transparent;
+
+  > i.material-icons {
+    font-size: 3rem;
+  }
+
+  &:focus {
+    background-color: transparent;
+  }
+}

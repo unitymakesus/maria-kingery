@@ -1,0 +1,145 @@
+nav {
+  box-shadow: none;
+}
+
+.banner .nav-primary {
+  background-color: $color-mint-light;
+
+  ul a {
+    font-size: 1rem;
+  }
+}
+
+.header-inline nav ul a {
+  padding: 0.6rem 1rem;
+}
+
+.banner .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  @media #{$medium-and-up} {
+    align-items: flex-end;
+  }
+}
+
+.banner .navbar-menu {
+  display: none;
+  overflow: visible;
+  max-height: 1000rem;
+  padding: 0 0 1.5rem;
+
+  > ul {
+    width: 100%;
+  }
+
+  a {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  @media #{$medium-and-up} {
+    display: flex;
+    padding: 1rem 15px 0;
+
+    > ul {
+      width: auto;
+    }
+  }
+  @media #{$medium-only} {
+    height: auto !important;
+  }
+  @media #{$medium-and-down} {
+    > ul {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+    }
+
+    li {
+      width: 100%;
+      flex-direction: column;
+
+      a {
+        width: 100%;
+      }
+
+      &.open {
+        .sub-menu {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+
+    .mobilenav-active & {
+      display: flex;
+
+      > ul {
+        display: block;
+      }
+    }
+  }
+
+  li.menu-item-has-children {
+    > a {
+      position: relative;
+      z-index: 100;
+
+      &::after {
+        display: inline-block;
+        margin-left: 0.5em;
+        vertical-align: 0.255em;
+        border-style: solid;
+        border-width: 0;
+        border-top-width: 2px;
+        border-left-width: 2px;
+        height: 7px;
+        width: 7px;
+        transform: rotate(225deg);
+        transform-origin: center;
+        content: '';
+      }
+    }
+
+    .sub-menu {
+      display: none;
+      max-height: 1000rem;
+      min-width: 250px;
+      overflow: visible;
+
+      li {
+        background-color: $color-mint-light;
+      }
+    }
+
+    &.open {
+      > a::after {
+        transform: rotate(45deg);
+      }
+
+      .sub-menu {
+        display: block;
+      }
+    }
+
+    @media #{$large-and-up} {
+      .sub-menu {
+        height: auto;
+        max-height: 1000rem;
+        box-shadow: 0 5px 35px transparentize($color-black, 0.8);
+      }
+    }
+    @media #{$medium-and-down} {
+      max-height: 1000rem;
+      overflow: visible;
+    }
+  }
+}
