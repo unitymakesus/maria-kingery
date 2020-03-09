@@ -1,0 +1,52 @@
+// Blockquote
+.fl-module-cbb-blockquote {
+  padding: 2.5rem 0;
+
+  blockquote {
+    position: relative;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  blockquote,
+  cite {
+    color: inherit;
+  }
+
+  blockquote p {
+    font-family: $serif;
+    font-size: 1.75rem;
+    line-height: 1.25;
+    margin: 0;
+
+    &:first-of-type::before {
+      position: absolute;
+      left: -1.5rem;
+      top: 1.5rem;
+      font-size: 3rem;
+      line-height: 0;
+      color: #8F819D;
+      content: '“';
+    }
+
+    &:first-of-type::after {
+      position: relative;
+      bottom: -0.75rem;
+      right: -0.5rem;
+      font-size: 3rem;
+      line-height: 0;
+      color: #8F819D;
+      content: '”';
+    }
+  }
+
+  cite {
+    display: inline-block;
+    font-size: 0.86rem;
+    margin-top: 0.5rem;
+  }
+
+  @media #{$medium-and-up} {
+    padding: 5rem 0;
+  }
+}

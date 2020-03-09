@@ -1,8 +1,8 @@
 // Font size utility classes.
 $sizes: (
-  'h1': rem-calc(60),
-  'h2': rem-calc(34),
-  'h3': rem-calc(24)
+  'h1': rem-calc(64),
+  'h2': rem-calc(56),
+  'h3': rem-calc(48)
 );
 
 @each $heading, $size in $sizes {
@@ -10,10 +10,15 @@ $sizes: (
   .#{$heading} {
     font-size: $size;
     font-family: $serif;
-    font-weight: normal;
+    font-weight: 600;
     letter-spacing: 0;
     margin: 0;
   }
+}
+
+h1,
+.h1 {
+  font-weight: 400;
 }
 
 // Font weight utility classes.

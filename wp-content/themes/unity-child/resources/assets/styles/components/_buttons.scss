@@ -2,6 +2,39 @@ button:hover {
   cursor: pointer;
 }
 
+.btn {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: currentColor;
+  border-radius: 0;
+  color: inherit;
+  padding: 0.5rem 3rem;
+  font-size: 1rem;
+  font-family: $sans-serif;
+  text-transform: none;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn--purple {
+  background-color: $color-purple-light;
+  color: $color-mint-light;
+
+  &:hover,
+  &:focus {
+    background-color: $color-purple-dark;
+  }
+}
+
+.btn-primary {
+  @extend .btn--purple;
+}
+
 // Menu toggles
 .btn-menu-toggle {
   display: flex;

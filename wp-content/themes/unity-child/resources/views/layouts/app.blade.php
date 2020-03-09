@@ -29,6 +29,9 @@
     </div>
     @php do_action('get_footer') @endphp
     @include('partials.footer')
+    <div class="screen-reader-text">
+      @include('partials.color-matrix')
+    </div>
     @php wp_footer() @endphp
   </body>
 </html>

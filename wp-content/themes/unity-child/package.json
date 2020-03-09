@@ -79,6 +79,7 @@
     "jquery": "^3.3.1",
     "macy": "^2.3.1",
     "materialize-css": "^1.0.0",
+    "verge": "^1.10.2",
     "webfontloader": "^1.6.28"
   }
 }
