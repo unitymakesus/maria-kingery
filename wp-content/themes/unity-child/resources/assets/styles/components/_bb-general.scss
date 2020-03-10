@@ -32,6 +32,10 @@
 .fl-row--gradient {
   position: relative;
   background-color: $color-mint-light;
+
+  .fl-module-photo img {
+    opacity: 0.8;
+  }
 }
 
 body:not(.fl-builder-edit) {
