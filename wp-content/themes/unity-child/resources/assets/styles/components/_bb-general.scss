@@ -1,3 +1,4 @@
+
 .fl-row--page-header {
   position: relative;
   color: $color-white;
@@ -17,6 +18,17 @@
   }
 }
 
+.fl-row--footer-cta {
+  a.fl-button,
+  a.fl-button:visited {
+    &:hover,
+    &:focus {
+      background-color: $color-purple-dark;
+      color: $color-mint-light !important;
+    }
+  }
+}
+
 .fl-row--gradient {
   position: relative;
   background-color: $color-mint-light;
@@ -33,8 +45,8 @@ body:not(.fl-builder-edit) {
       position: absolute;
       top: 0;
       width: 100%;
-      height: 100%;
-      background-image: linear-gradient(to bottom, $color-white 0%, #FAFCFB 100px, $color-mint-light 100%);
+      height: 300px;
+      background-image: linear-gradient(to bottom, $color-white 0%, #FAFCFB 75px, $color-mint-light 100%);
       content: '';
       z-index: 0;
     }

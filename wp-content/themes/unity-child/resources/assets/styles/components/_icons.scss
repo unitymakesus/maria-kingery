@@ -21,10 +21,10 @@
       background-color: transparent;
       border: 1px solid $color-mint;
 
-      // &:hover, &:focus {
-      //   border-color: $color-red;
-      //   background-color: $color-red;
-      // }
+      &:hover, &:focus {
+        background-color: $color-purple-light;
+        border-color: $color-purple-light;
+      }
 
       &::before {
         position: absolute;

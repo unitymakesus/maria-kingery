@@ -16,9 +16,17 @@ $cards = $settings->cards;
 				</div>
 				<?php if ($card->cta_link) : ?>
 					<a href="<?php echo esc_url($card->cta_link); ?>" class="card__link">
-						<div class="link-border">
-							<?php echo $card->cta_text; ?>
+						<div class="card__link-text">
+							<div class="link-border">
+								<?php echo $card->cta_text; ?>
+							</div>
 						</div>
+						<?php if ($card->cta_subtext) : ?>
+							<div class="card__link-subtext">
+                <?php echo $card->cta_subtext; ?>
+                <span aria-hidden="true">>></span>
+							</div>
+						<?php endif; ?>
 					</a>
 				<?php endif; ?>
 			</article>

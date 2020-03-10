@@ -27,7 +27,8 @@ button:hover {
 
   &:hover,
   &:focus {
-    background-color: $color-purple-dark;
+    background-color: $color-mint;
+    color: $color-purple-dark;
   }
 }
 

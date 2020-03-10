@@ -3,7 +3,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
   grid-gap: 1rem;
-  margin-bottom: -9rem; // Temp...
+  margin-bottom: -8.5rem; // Temp...
 }
 
 .card {
@@ -12,7 +12,7 @@
   flex-direction: column;
   background-color: transparentize($color-purple-dark-alt, 0.2);
   color: $color-mint-light;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 1rem 1.5rem;
   box-shadow: $box-shadow-default;
 
   &__heading {
@@ -29,10 +29,24 @@
   &__link {
     @extend .a11y-link-wrap;
 
-    display: block;
+    color: $color-mint-light;
     text-decoration: none !important;
     text-align: center;
-    color: $color-white;
+
+    &:hover,
+    &:focus {
+      .link-border::after {
+        bottom: 100%;
+      }
+
+      .card__link-subtext {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__link-text {
+    display: block;
     margin-top: 3rem;
 
     .link-border {
@@ -40,33 +54,21 @@
 
       &::after {
         position: absolute;
-        bottom: 0;
+        bottom: -0.5rem;
         left: 0;
         width: 100%;
         height: 3px;
-        background-color: $color-white;
+        background-color: $color-mint-light;
         content: '';
         transition: all 0.3s ease-in-out;
       }
     }
-
-    &:hover,
-    &:focus {
-      .link-border::after {
-        bottom: 100%;
-      }
-    }
   }
 
-  // &:nth-of-type(1) {
-  //   grid-area: 1 / 1 / 4 / 2;
-  // }
-
-  // &:nth-of-type(2) {
-  //   grid-area: 1 / 2 / 4 / 3;
-  // }
-
-  // &:nth-of-type(3) {
-  //   grid-area: 1 / 3 / 4 / 4;
-  // }
+  &__link-subtext {
+    font-weight: normal;
+    font-style: italic;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
 }

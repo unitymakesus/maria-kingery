@@ -88,6 +88,10 @@ FLBuilder::register_settings_form('featured_services_form', [
 						'cta_text' => [
 							'type'  => 'text',
 							'label' => __('CTA Text', 'cbb'),
+            ],
+						'cta_subtext' => [
+							'type'  => 'text',
+							'label' => __( 'CTA Subtext', 'cbb' ),
 						],
 						'cta_link' => [
 							'type'  => 'link',

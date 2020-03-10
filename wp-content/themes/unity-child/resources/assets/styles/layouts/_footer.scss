@@ -1,5 +1,5 @@
 .page-footer {
-  padding: 1rem 0 4rem 0;
+  padding: 4rem 0;
   background-color: $color-purple-dark;
   color: $color-white;
 
@@ -14,24 +14,39 @@
 
   a {
     color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .footer-right {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: rem-calc(12);
   }
 
   @media #{$medium-and-up} {
     .footer-center {
       text-align: left;
     }
+
+    .footer-right {
+      padding-left: 0;
+    }
   }
 }
 
-.page-footer .footer-copyright {
-  margin-top: 4rem;
-  padding: 0;
-  height: auto;
-  background-color: transparent;
-  font-size: rem-calc(12);
-  text-align: center;
+// .page-footer .footer-copyright {
+//   margin-top: 4rem;
+//   padding: 0;
+//   height: auto;
+//   background-color: transparent;
+//   font-size: rem-calc(12);
+//   text-align: center;
 
-  @media #{$medium-and-up} {
-    text-align: left;
-  }
-}
+//   @media #{$medium-and-up} {
+//     text-align: left;
+//   }
+// }

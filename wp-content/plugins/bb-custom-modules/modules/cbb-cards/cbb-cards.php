@@ -82,6 +82,10 @@ FLBuilder::register_settings_form('cards_form', [
 							'type'  => 'text',
 							'label' => __( 'CTA Text', 'cbb' ),
 						],
+						'cta_subtext' => [
+							'type'  => 'text',
+							'label' => __( 'CTA Subtext', 'cbb' ),
+						],
 						'cta_link' => [
 							'type'  => 'link',
 							'label' => __( 'CTA Link', 'cbb' ),

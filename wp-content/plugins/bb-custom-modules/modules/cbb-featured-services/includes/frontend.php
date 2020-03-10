@@ -21,13 +21,21 @@ $items = $settings->items;
 		<div class="featured-service__content">
 			<h3 class="featured-service__heading"><?php echo $item->title; ?></h3>
 			<p><?php echo $item->description; ?></p>
-			<?php if ($item->cta_link) : ?>
-				<a href="<?php echo esc_url($item->cta_link); ?>" class="featured-service__link">
-					<div class="link-border">
-						<?php echo $item->cta_text; ?>
-					</div>
-				</a>
-			<?php endif; ?>
+      <?php if ($item->cta_link) : ?>
+        <a href="<?php echo esc_url($item->cta_link); ?>" class="featured-service__link">
+          <div class="featured-service__link-text">
+            <div class="link-border">
+              <?php echo $item->cta_text; ?>
+            </div>
+          </div>
+          <?php if ($item->cta_subtext) : ?>
+            <div class="featured-service__link-subtext">
+              <?php echo $item->cta_subtext; ?>
+              <span aria-hidden="true">>></span>
+            </div>
+          <?php endif; ?>
+        </a>
+      <?php endif; ?>
 		</div>
 	</section>
 	<?php endforeach; ?>
