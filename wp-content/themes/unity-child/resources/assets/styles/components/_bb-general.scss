@@ -139,3 +139,21 @@ body:not(.fl-builder-edit) {
     }
   }
 }
+
+.fl-col--half-img-r {
+  @media #{$medium-and-up} {
+    .fl-module-photo > .fl-module-content {
+      width: calc(50vw - 28px);
+      margin-right: calc((100vw - 1220px) / 2 * -1);
+    }
+
+    .fl-photo-content {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

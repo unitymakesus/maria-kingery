@@ -29,6 +29,7 @@
   &__link {
     @extend .a11y-link-wrap;
 
+    font-size: 1rem;
     color: $color-mint-light;
     text-decoration: none !important;
     text-align: center;
