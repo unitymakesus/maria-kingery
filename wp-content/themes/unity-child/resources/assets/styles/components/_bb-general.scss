@@ -29,10 +29,14 @@
   }
 }
 
-.fl-row--gradient {
+.fl-row--gradient,
+.fl-row--full-mint {
   position: relative;
   background-color: $color-mint-light;
+  z-index: 5;
+}
 
+.fl-row--gradient {
   .fl-module-photo img {
     opacity: 0.8;
   }

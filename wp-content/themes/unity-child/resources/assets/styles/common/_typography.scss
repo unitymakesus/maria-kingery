@@ -2,7 +2,10 @@
 $sizes: (
   'h1': rem-calc(64),
   'h2': rem-calc(56),
-  'h3': rem-calc(48)
+  'h3': rem-calc(48),
+  'h4': rem-calc(36),
+  'h5': rem-calc(24),
+  'h6': rem-calc(18)
 );
 
 @each $heading, $size in $sizes {
