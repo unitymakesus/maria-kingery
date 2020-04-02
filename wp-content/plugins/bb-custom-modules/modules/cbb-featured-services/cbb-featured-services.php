@@ -73,9 +73,10 @@ FLBuilder::register_settings_form('featured_services_form', [
 							'label' => __( 'Title', 'cbb' ),
 						],
 						'description' => [
-							'type'  => 'textarea',
-							'label' => __( 'Description', 'cbb' ),
-							'rows'  => 6,
+							'type'          => 'editor',
+							'label'         => __( 'Description', 'cbb' ),
+							'media_buttons' => false,
+							'wpautop'       => true,
 						],
 						'icon' => [
 							'type'  => 'photo',
